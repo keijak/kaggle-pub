@@ -6,7 +6,7 @@
   - Find and eliminate outliers.
   - Consider binning
   - Consider normalization
-  - Consider log1p transformation to make it closer to symmetric bell curve.
+  - Consider log1p transformation to make a long-tail curve closer to a symmetric bell curve.
   - Remove unimportant features to generalize better.
 
 - Think about relation among data points.
@@ -24,12 +24,14 @@
   - Use separate validation data set for CV, to avoid overfitting to the data set.
 
 - Pandas
-  - concat()
+  - df.sample(frac=1)
+    - random shuffle. https://stackoverflow.com/questions/29576430/shuffle-dataframe-rows
+  - pd.concat()
     - axis=0 concatenates vertically
     - axis=1 concatenates horizontally
-  - get_dummies()
+  - pd.get_dummies()
     - categorical => one-hot
-  - cut() and qcut()
+  - pd.cut() and pd.qcut()
     - binning
 
 - Seaborn
