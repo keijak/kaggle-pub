@@ -1,17 +1,27 @@
-- Sex matters. Women more likely survived.
-- Pclass matters. 1st class more likely survived.
-- Age matters. Infants survived.
+- Remove outliers from training data set
+  - They don't add value to the model.
 
-- null values.
-  - Guess age from pclass and sex.
+- XGBoost outputs feature importance.
+  - For each important feature, visualize distribution and correlation with the label.
+  - Find and eliminate outliers.
+  - Consider binning
+  - Consider normalization
+  - Consider log1p transformation to make it closer to symmetric bell curve.
+  - Remove unimportant features to generalize better.
 
-- Categorical variables: one-hot vs ordinal.
+- Think about relation among data points.
+  - Maybe try to cluster by family. Families maybe share consequences.
 
-- Model selection
-  - Cross validation
-  - Grid search
+- Add a column for null vlaue count.
+  - Quantifies the amount of information each data point has.
 
-- Bias vs variance
+- Guess null values from other features.
+  - e.g. Guess age from pclass and sex.
+
+- Categorical variables: consider one-hot encoding.
+
+- Grid search
+  - Use separate validation data set for CV, to avoid overfitting to the data set.
 
 - Pandas
   - concat()
@@ -19,8 +29,12 @@
     - axis=1 concatenates horizontally
   - get_dummies()
     - categorical => one-hot
-  - pandas_profiling
-    - good overview
+  - cut() and qcut()
+    - binning
+
+- Seaborn
+  - plot and grid
+  - two-color pallete for correlation matrix.
 
 - Helpful Kernels
   - https://www.kaggle.com/startupsci/titanic-data-science-solutions
