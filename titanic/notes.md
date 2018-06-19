@@ -23,6 +23,13 @@
 - Grid search
   - Use separate validation data set for CV, to avoid overfitting to the data set.
 
+- Cross Validation
+  - Find the number of kfold such that local CV score matches the public leaderboard score.
+
+- Avoid overfitting: Regularization
+  - Suppress high variance by increasing regularization term.
+  - It's easier to control regularization than number of features when ensembling many models.
+
 - Pandas
   - df.sample(frac=1)
     - random shuffle. https://stackoverflow.com/questions/29576430/shuffle-dataframe-rows
