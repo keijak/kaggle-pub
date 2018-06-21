@@ -15,6 +15,10 @@
 - Add a column for null vlaue count.
   - Quantifies the amount of information each data point has.
 
+- Normalize values (x-mean)/stddev
+
+- Add polynomial features
+
 - Guess null values from other features.
   - e.g. Guess age from pclass and sex.
 
