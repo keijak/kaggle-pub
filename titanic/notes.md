@@ -1,5 +1,24 @@
-- Remove outliers from training data set
-  - They don't add value to the model.
+- Outliers.
+  - a) Remove outliers from training data set since they're just confusing.
+  - b) Treat strange values as missing values.
+
+- Missing values.
+  - Filling with mean is poor.
+  - Guess null values from other features.
+    - e.g. Guess age from pclass and sex.
+  - Winsorizing: replace too large values with the maximum of the others.
+  - XGBoost can handle NaN.
+
+- Categorical variables:
+  - tree-based models can handle ordinal features well.
+  - one-hot encoding
+  - rank encoding (number of occurrences)
+  - frequency encoding (probability of occurrences)
+  - likelihood encoding (probability of target binary feature)
+  - embedding
+
+- Standardize numerical features
+  - `(x - x.mean()) / x.std()`
 
 - XGBoost outputs feature importance.
   - For each important feature, visualize distribution and correlation with the label.
@@ -9,20 +28,13 @@
   - Consider log1p transformation to make a long-tail curve closer to a symmetric bell curve.
   - Remove unimportant features to generalize better.
 
-- Think about relation among data points.
+- Think about hidden relation among data points.
   - Maybe try to cluster by family. Families maybe share consequences.
 
 - Add a column for null vlaue count.
   - Quantifies the amount of information each data point has.
 
-- Normalize values (x-mean)/stddev
-
 - Add polynomial features
-
-- Guess null values from other features.
-  - e.g. Guess age from pclass and sex.
-
-- Categorical variables: consider one-hot encoding.
 
 - Grid search
   - Use separate validation data set for CV, to avoid overfitting to the data set.
