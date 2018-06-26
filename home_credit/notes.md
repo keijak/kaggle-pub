@@ -1,0 +1,4 @@
+- Can I use negative down-sampling?
+  - https://www.slideshare.net/TakanoriHayashi3/talkingdata-adtracking-fraud-detection-challenge-1st-place-solution
+  - https://ai.google/research/pubs/pub41159
+  - https://research.fb.com/publications/practical-lessons-from-predicting-clicks-on-ads-at-facebook/
