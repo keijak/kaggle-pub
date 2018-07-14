@@ -27,3 +27,9 @@
 - Before reading other people's kernels and discussions, make hypotheses yourself on what could be potentially useful in fresh mind. This makes difference.
 - Continue feature engineering until the final week.
 - Focus on model selection, hyperparam tuning, ensembling only in the final week.
+- Create statistic features using groupby(id combination) + aggregate
+- How to use PCA:
+  - Concat train and test and create the all-data dataframe.
+  - pca.fit(df_all)
+  - p_train = pca.transform(df_train)
+  - p_train = ca.transform(df_test)
