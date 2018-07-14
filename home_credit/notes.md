@@ -17,9 +17,8 @@
 - Check team size of top people.
   - If few, good chance.
 - Pickle dataframes. It loads faster than CSV.
-  - Pickle is easy and faster than HDF5.
-  - In Python 2, use cPickle to utilize faster C impl.
-  - In Python 3, just use pickle.
+  - Pickle is easy.
+  - HDF5: df.to_hdf / pd.read_hdf
 - Make model overfit once, then tweak regularization to reduce variance.
 - Track your code changes so you can reproduce.
 - Macro in Jupyter to import common libs.
