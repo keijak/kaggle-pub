@@ -4,6 +4,8 @@
   - Compare distribution between training data vs test data.
 - Likelihood encoding on categorical features with high cardinality.
   - KFold-mean to avoid overfitting.
+- Make new features using groupby+agg
+- Make new features using nearest neighbors
 - Baysian optimization of hyperparameters.
   - https://www.kaggle.com/willkoehrsen/automated-model-tuning
 
@@ -28,8 +30,15 @@
 - Continue feature engineering until the final week.
 - Focus on model selection, hyperparam tuning, ensembling only in the final week.
 - Create statistic features using groupby(id combination) + aggregate
+- Create statistic features using nearest neighbors on arbitrary distance definition
 - How to use PCA:
   - Concat train and test and create the all-data dataframe.
   - pca.fit(df_all)
   - p_train = pca.transform(df_train)
   - p_train = ca.transform(df_test)
+- Feature interaction
+  - Create a new feature by +,-,*,/,AND,OR,XOR, etc. on two features
+    - N features => N^2 features!
+    - Reduce the number of features by feature selection and dimensionality reduction
+  - Decision-tree algorithms will benefit from such features, but may overfit.
+  - Neural networks may extract feature interactions automatically with lots of data.
