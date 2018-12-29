@@ -21,6 +21,7 @@ pyarrow = "*"
 tensorflow-gpu = "*"
 tensorflow = "*"
 nltk = "*"
+keras = "*"
 
 [requires]
 python_version = "3.5"
