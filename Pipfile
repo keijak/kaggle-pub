@@ -18,6 +18,9 @@ matplotlib = "*"
 tqdm = "*"
 optuna = "*"
 pyarrow = "*"
+tensorflow-gpu = "*"
+tensorflow = "*"
+nltk = "*"
 
 [requires]
 python_version = "3.5"
