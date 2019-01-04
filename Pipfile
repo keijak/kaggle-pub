@@ -23,6 +23,7 @@ tensorflow = "*"
 nltk = "*"
 keras = "*"
 kaggle = "*"
+gensim = "*"
 
 [requires]
 python_version = "3.5"
